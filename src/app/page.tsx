@@ -1,5 +1,11 @@
+import Calculator from '~/components/Calculator'
+
 const Home: React.FC = () => {
-  return <div />
+  return (
+    <>
+      <Calculator />
+    </>
+  )
 }
 
 export default Home
