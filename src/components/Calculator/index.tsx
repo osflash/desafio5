@@ -57,6 +57,7 @@ const Calculator: React.FC = () => {
           buttonList.map(button => {
             const rightButtons = ['/', '*', '-', '+'].includes(button)
             const equalsButton = button === '='
+            const isCE = button === 'CE'
 
             return (
               <button
@@ -71,7 +72,8 @@ const Calculator: React.FC = () => {
                       '#462878': !equalsButton && rightButtons,
                       '#7F45E2': equalsButton
                     }
-                  )
+                  ),
+                  color: clsx({ '#975DFA': isCE })
                 }}
               >
                 {button}
